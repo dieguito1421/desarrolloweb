@@ -1,0 +1,417 @@
+/* RESETEO BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* ENCABEZADO */
+.cabecera-principal {
+    background-color: #000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.cabecera-principal h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #5e17eb; /* Efecto Neón Morado */
+}
+
+.navegacion-principal ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+.navegacion-principal a {
+    text-decoration: none;
+    color: #bbb;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navegacion-principal a:hover {
+    color: #00e5ff; /* Cian Gamer */
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-maestro {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* SECCION HERO */
+.seccion-hero {
+    display: flex;
+    gap: 20px;
+    height: 450px;
+    margin-bottom: 40px;
+}
+
+.noticia-destacada {
+    flex: 2;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.imagen-full {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.texto-flotante {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+}
+
+.etiqueta {
+    background-color: #5e17eb;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.texto-flotante h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+/* LISTA DERECHA */
+.lista-lateral {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mini-noticia {
+    display: flex;
+    background: white;
+    height: 23%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.mini-img {
+    width: 40%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.mini-texto {
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mini-texto h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* SECCION INFERIOR (GRID) */
+.contenedor-inferior {
+    display: flex;
+    gap: 30px;
+   
+}
+
+.feed-noticias {
+    flex: 3;
+}
+/* linea final*/
+.titulo-seccion {
+    border-bottom: 3px solid #5e17eb;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.tarjeta-larga {
+    display: flex;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.foto-tarjeta {
+    width: 35%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.info-tarjeta {
+    width: 65%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.categoria {
+    color: #5e17eb;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.fecha {
+    color: #888;
+    font-size: 12px;
+    margin-top: auto;
+}
+
+/* BARRA DERECHA */
+.barra-derecha {
+    flex: 1;
+}
+
+.widget {
+    margin-bottom: 30px;
+}
+
+/* Estilo para centrar el reloj */
+.widget-reloj {
+    text-align: center;
+    background-color: white; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilo del contenedor de los botones */
+.redes-sociales {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre cada botón */
+}
+
+/* Estilo de CADA botón */
+.boton-social {
+    /* MAGIA FLEXBOX: Alinea icono y texto */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
+    gap: 12px;               /* Espacio entre el icono y la palabra */
+    
+    /* Diseño visual */
+    width: 100%;             /* Ocupa todo el ancho disponible */
+    padding: 12px 0;         /* Relleno arriba y abajo */
+    border-radius: 5px;      /* Bordes redondeados */
+    text-decoration: none;   /* Sin subrayado */
+    color: white;            /* Texto blanco */
+    font-weight: bold;       /* Texto en negrita */
+    font-size: 16px;
+    font-family: sans-serif;
+    transition: transform 0.2s;
+}
+
+/* Efecto al pasar el mouse */
+.boton-social:hover {
+    transform: scale(1.02); /* Crece un poquito */
+    opacity: 0.9;
+}
+
+/* Colores Específicos */
+.facebook { background-color: #1877f2; }
+.tiktok { background-color: #333; } /* Color negro grisáceo para TikTok */
+.instagram { 
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
+}
+
+/* FOOTER */
+.pie-pagina {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .seccion-hero {
+        flex-direction: column;
+        height: auto;
+    }
+    .lista-lateral { gap: 10px; }
+    .mini-noticia { height: 80px; }
+    .contenedor-inferior { flex-direction: column; }
+    .tarjeta-larga { flex-direction: column; height: auto; }
+    .foto-tarjeta { width: 100%; height: 200px; }
+    .info-tarjeta { width: 100%; }
+}
+
+/*  EFECTO ZOOM  */
+
+/* Zoom para la noticia principal */
+.noticia-destacada:hover img {
+    transform: scale(1.1);
+}
+
+/* Zoom para las noticias de la lista lateral */
+.mini-noticia:hover img {
+    transform: scale(1.1);
+}
+
+/* Zoom para las noticias de abajo */
+.tarjeta-larga:hover img {
+    transform: scale(1.1);
+}
+
+/* Quitar subrayado del enlace de la noticia destacada */
+.noticia a{ 
+    
+    text-decoration: none; /* Esta línea quita el subrayado */
+    color: #ffffff;
+}
+
+.noticiaLateral a{ 
+    
+    text-decoration: none; /* Esta línea quita el subrayado */
+    color: #000000;
+}
+
+/*pagina nueva exclusiva*/
+
+/* --- ESTILOS PARA LA PÁGINA DE NOTICIA (noticia.html) --- */
+
+.articulo-completo {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 1. Título */
+.cabecera-articulo {
+    margin-bottom: 20px;
+    text-align: left; /* Título alineado a la izquierda */
+}
+
+.cabecera-articulo h1 {
+    font-size: 2.5rem; /* Título bien grande */
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.fecha-autor {
+    color: #777;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* 2. Imagen */
+.imagen-articulo {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.imagen-articulo img {
+    width: 100%;
+    height: auto; /* Altura automática para no deformar */
+    max-height: 500px; /* Que no sea excesivamente alta */
+}
+
+.imagen-articulo figcaption {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* 3. Texto */
+.texto-articulo {
+    line-height: 1.8; /* Espacio entre líneas para leer mejor */
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+.texto-articulo p {
+    margin-bottom: 20px;
+}
+
+.texto-articulo h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #5e17eb; /* Subtítulos morados */
+}
+
+.intro {
+    font-weight: bold; /* Primer párrafo en negrita */
+}
+
+/* 4. Botones de Navegación */
+.navegacion-articulo {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.boton-nav {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.boton-nav:hover {
+    background-color: #5e17eb;
+}
+
+.noticiaFinal a{ 
+    
+    text-decoration: none; /* Esta línea quita el subrayado */
+    
+    color: #000000;
+}
